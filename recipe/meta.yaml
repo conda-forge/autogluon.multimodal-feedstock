@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 0
+  number: 1
   script_env:
    - RELEASE=1
 
@@ -81,3 +81,4 @@ about:
 extra:
   recipe-maintainers:
     - giswqs
+    - Innixma
