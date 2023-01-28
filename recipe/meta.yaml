@@ -35,7 +35,7 @@ requirements:
     - evaluate <=0.3.0
     - accelerate <0.14,>=0.9
     - timm <0.7.0
-    - pytorch <1.13,>=1.9
+    - pytorch-gpu <1.13,>=1.9
     - torchvision <0.14.0
     - torchtext <0.14.0
     - fairscale <=0.4.6,>=0.4.5
