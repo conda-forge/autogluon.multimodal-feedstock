@@ -13,7 +13,7 @@ build:
   # noarch: python
   skip: True  # [win or py>=310]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 2
+  number: 3
   script_env:
    - RELEASE=1
 
@@ -43,7 +43,7 @@ requirements:
     - timm <0.7.0
     - pytorch <1.13,>=1.9
     - torchvision <0.14.0
-    - torchtext <0.14.0  # [linux or osx]
+    - torchtext <0.14.0  # [not arm64]
     - fairscale <=0.4.6,>=0.4.5  # [not win]
     - scikit-image <0.20.0,>=0.19.1
     - smart_open <5.3.0,>=5.2.1
