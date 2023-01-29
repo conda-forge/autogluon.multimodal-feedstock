@@ -55,7 +55,7 @@ requirements:
     - omegaconf <2.2.0,>=2.1.1
     - sentencepiece <0.2.0,>=0.1.95
     - pytorch-metric-learning # <1.4.0,>=1.3.0
-    # - nlpaug <=1.1.10,>=1.1.10  # temporarily disabled due to pytorch gpu version conflict 
+    - nlpaug <=1.1.10,>=1.1.10  # incompatible with pytorch gpu
     - nltk <4.0.0,>=3.4.5
     - openmim # <=0.2.1,>0.1.5
     - defusedxml <=0.7.1,>=0.7.1
