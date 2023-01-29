@@ -11,7 +11,7 @@ source:
 
 build:
   # noarch: python
-  skip: True  # [py>=310]
+  skip: True  # [win or py>=310]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
   number: 2
   script_env:
