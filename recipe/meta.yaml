@@ -30,38 +30,38 @@ requirements:
     - pip
   run:
     - python # >=3.7,<3.10
-    - numpy >=1.21
-    - scipy >=1.5.4
-    - pandas >1.4.0
-    - scikit-learn >=1.0.0
-    - pillow >=9.3.0
-    - tqdm >=4.38.0
+    - numpy >=1.21,<1.24  # numpy @ 1.24.1
+    - scipy >=1.5.4,<1.10  # scipy @ 1.10.0
+    - pandas >1.4.0,<1.6  # pandas @ 1.5.4
+    - scikit-learn >=1.0.0,<1.2  # scikit-learn @ 1.2.1
+    - pillow >=9.3.0,<=9.4  # pillow @ 9.4.0
+    - tqdm >=4.38.0  # tqdm @ 4.46.1
     - boto3
     - requests
-    - jsonschema 
-    - seqeval 
-    - evaluate 
-    - accelerate >=0.9
-    - timm 
-    - pytorch >=1.9
-    - torchvision 
-    - torchtext   # [not arm64]
-    - fairscale >=0.4.5  # [not win]
-    - scikit-image >=0.19.1
-    - smart_open >=5.2.1
+    - jsonschema  # jsonschema @ 4.17.3
+    - seqeval <=1.2.2  # seqeval @ 1.2.2
+    - evaluate <=0.3.0  # evaluate @ 0.3.0
+    - accelerate >=0.9,<0.14  # accelerate @ 0.16
+    - timm <0.7  # timm @ 0.6.12
+    - pytorch >=1.9,<1.14  # pytorch @ 1.13.1
+    - torchvision <0.15  # torchvision @ 0.14.1
+    - torchtext <0.15  # [not arm64]  torchtext @ 0.14.1
+    - fairscale >=0.4.5,<0.4.14  # [not win]  fairscale @ 0.4.13
+    - scikit-image >=0.19.1,<0.20  # scikit-image @ 0.19.3
+    - smart_open >=5.2.1  # smart_open @ 6.3.0
     - pytorch-lightning >=1.7.4,<1.8  # pytorch-lightning @ 1.9.0
-    - text-unidecode 
-    - torchmetrics >=0.8.0
-    - transformers >=4.23.0
-    - nptyping >=1.4.4,<2
-    - omegaconf >=2.1.1
-    - sentencepiece >=0.1.95
-    - pytorch-metric-learning # <1.4.0,>=1.3.0
-    - nlpaug >=1.1.10
-    - nltk >=3.4.5
-    - openmim # <=0.2.1,>0.1.5
-    - defusedxml >=0.7.1
-    - albumentations >=1.1.0
+    - text-unidecode <=1.3  # text-unidecode @ 1.3.0
+    - torchmetrics >=0.8.0  # torchmetrics @ 0.11.1
+    - transformers >=4.23.0  # transformers @ 4.26.0
+    - nptyping >=1.4.4,<2  # nptyping @ 2.4.1
+    - omegaconf >=2.1.1  # omegaconf @ 2.3.0
+    - sentencepiece >=0.1.95  # sentencepiece @ 0.1.97
+    - pytorch-metric-learning  # pytorch-metric-learning @ 2.0.0
+    - nlpaug >=1.1.10  # nlpaug @ 1.1.11
+    - nltk >=3.4.5  # nltk @ 3.8.1
+    - openmim  # openmim @ 0.3.5
+    - defusedxml >=0.7.1  # defusedxml @ 0.7.1
+    - albumentations >=1.1.0  # albumentations @ 1.3.0
     - autogluon.core =={{ version }}
     - autogluon.features =={{ version }}
     - autogluon.common =={{ version }}
