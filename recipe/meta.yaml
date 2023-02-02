@@ -71,6 +71,7 @@ test:
     - python -c "from autogluon.multimodal import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
   requires:
     - pip
+    - pytorch =*=cuda*  # [linux]
 
 about:
   home: https://pypi.org/project/autogluon.multimodal
