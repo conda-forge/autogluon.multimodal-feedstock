@@ -1,13 +1,16 @@
 {% set name = "autogluon.multimodal" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 96075e9bfce79420fe78a5566a1ba82f9a80598e955f4a4fc490f5561ede70bd
+  # url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
+  # sha256: 96075e9bfce79420fe78a5566a1ba82f9a80598e955f4a4fc490f5561ede70bd
+  # Use the latest commit temporarily
+  url: https://github.com/autogluon/autogluon/archive/e6458bdbbaa22908457a199f1095b80edc3b85f9.tar.gz
+  sha256: 39e542cfc5f7d5ba767dbb20fa462d9a7d535115011b3cd2e98dd70175090722
 
 build:
   # noarch: python
