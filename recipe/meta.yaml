@@ -9,8 +9,8 @@ source:
   # url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
   # sha256: 96075e9bfce79420fe78a5566a1ba82f9a80598e955f4a4fc490f5561ede70bd
   # Use the latest commit temporarily
-  url: https://github.com/autogluon/autogluon/archive/e6458bdbbaa22908457a199f1095b80edc3b85f9.tar.gz
-  sha256: 39e542cfc5f7d5ba767dbb20fa462d9a7d535115011b3cd2e98dd70175090722
+  url: https://github.com/autogluon/autogluon/archive/70a783f6d86f48be57fa6d3c5454508bdf73733f.tar.gz
+  sha256: 3b78bc71b908ac87a70744ef09ed8825c37224a40b3b2122ae53878f1c5cd953
 
 build:
   # noarch: python
@@ -45,7 +45,7 @@ requirements:
     - seqeval >=1.2.2,<1.3.0  # seqeval @ 1.2.2
     - evaluate >=0.2.2,<0.4.0  # evaluate @ 0.3.0
     - accelerate >=0.9,<0.17  # accelerate @ 0.16
-    - timm >0.6,<0.7.0  # timm @ 0.6.12
+    - timm >=0.6.12,<0.7.0  # timm @ 0.6.12
     - pytorch >=1.9,<1.14  # pytorch @ 1.13.1
     - torchvision <0.15.0  # torchvision @ 0.14.1
     # - torchtext <0.15  # [not arm64]  torchtext @ 0.14.1
@@ -53,7 +53,7 @@ requirements:
     - scikit-image >=0.19.1,<0.20.0  # scikit-image @ 0.19.3
     # - smart_open >=5.2.1,<5.3.0  # smart_open @ 6.3.0
     - pytorch-lightning >=1.8.0,<1.10.0  # pytorch-lightning @ 1.9.0
-    - text-unidecode >1.2,<1.4  # text-unidecode @ 1.3.0
+    - text-unidecode >=1.3,<1.4  # text-unidecode @ 1.3.0
     - torchmetrics >=0.8.0,<0.9.0  # torchmetrics @ 0.11.1
     - transformers >=4.23.0,<4.27.0  # transformers @ 4.26.0
     - nptyping >=1.4.4,<2.5.0  # nptyping @ 2.4.1
