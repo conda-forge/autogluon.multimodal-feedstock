@@ -6,18 +6,15 @@ package:
   version: {{ version }}
 
 source:
-  # url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: 96075e9bfce79420fe78a5566a1ba82f9a80598e955f4a4fc490f5561ede70bd
-  # Use the latest commit temporarily
-  url: https://github.com/autogluon/autogluon/archive/ab43ffb2c8ed6ad45b46d29958df7ae039a1c9ac.tar.gz
-  sha256: f66ec997340b7451bf879270acd18d9c3840e2b0315626730cc3e93c72288238
+  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 455831de3c9de8fbe11b100054b8f150661d0651212fcfa4ec2e42417fdac355
 
 build:
   # noarch: python
   skip: true  # [win or py>=311]
   skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 6
+  number: 0
   script_env:
    - RELEASE=1
 
@@ -41,30 +38,27 @@ requirements:
     - tqdm >=4.38,<5
     - boto3 >=1.10,<2
     - requests >=2.21,<3
-    - jsonschema >=4.14,<4.18  # jsonschema @ 4.17.3
-    - seqeval >=1.2.2,<1.3.0  # seqeval @ 1.2.2
-    - evaluate >=0.2.2,<0.4.0  # evaluate @ 0.3.0
-    - accelerate >=0.9,<0.17  # accelerate @ 0.16
-    - timm >=0.6.12,<0.7.0  # timm @ 0.6.12
-    - pytorch >=1.9,<1.14  # pytorch @ 1.13.1
-    - torchvision <0.15.0  # torchvision @ 0.14.1
-    # - torchtext <0.15  # [not arm64]  torchtext @ 0.14.1
-    - fairscale >=0.4.5,<0.4.14  # [not win]  fairscale @ 0.4.13
-    - scikit-image >=0.19.1,<0.20.0  # scikit-image @ 0.19.3
-    # - smart_open >=5.2.1,<5.3.0  # smart_open @ 6.3.0
-    - pytorch-lightning >=1.8.0,<1.10.0  # pytorch-lightning @ 1.9.0
-    - text-unidecode >=1.3,<1.4  # text-unidecode @ 1.3.0
-    - torchmetrics >=0.8.0,<0.9.0  # torchmetrics @ 0.11.1
-    - transformers >=4.23.0,<4.27.0  # transformers @ 4.26.0
-    - nptyping >=1.4.4,<2.5.0  # nptyping @ 2.4.1
-    - omegaconf >=2.1.1,<2.3.0  # omegaconf @ 2.3.0
-    - sentencepiece >=0.1.95,<0.2.0  # sentencepiece @ 0.1.97
-    - pytorch-metric-learning >=1.3.0,<2.0  # pytorch-metric-learning @ 2.0.0
-    - nlpaug >=1.1.10,<1.2.0  # nlpaug @ 1.1.11
-    - nltk >=3.4.5,<4.0.0  # nltk @ 3.8.1
-    - openmim >0.1.5,<0.4.0 # openmim @ 0.3.5
-    - defusedxml >=0.7.1,<0.7.2  # defusedxml @ 0.7.1
-    # - albumentations >=1.1.0,<=1.2.0  # albumentations @ 1.3.0
+    - jsonschema >=4.14,<4.18
+    - seqeval >=1.2.2,<1.3.0
+    - evaluate >=0.2.2,<0.4.0
+    - accelerate >=0.9,<0.17
+    - timm >=0.6.12,<0.7.0
+    - pytorch >=1.9,<1.14
+    - torchvision <0.15.0
+    - fairscale >=0.4.5,<0.4.14  # [not win]
+    - scikit-image >=0.19.1,<0.20.0
+    - pytorch-lightning >=1.8.0,<1.10.0
+    - text-unidecode >=1.3,<1.4
+    - torchmetrics >=0.8.0,<0.9.0
+    - transformers >=4.23.0,<4.27.0
+    - nptyping >=1.4.4,<2.5.0
+    - omegaconf >=2.1.1,<2.3.0
+    - sentencepiece >=0.1.95,<0.2.0
+    - pytorch-metric-learning >=1.3.0,<2.0
+    - nlpaug >=1.1.10,<1.2.0
+    - nltk >=3.4.5,<4.0.0
+    - openmim >0.1.5,<0.4.0
+    - defusedxml >=0.7.1,<0.7.2
     - jinja2 >=3.0.3,<3.2
     - tensorboard >=2.9,<3
     - pytesseract >=0.3.9,<0.3.11
