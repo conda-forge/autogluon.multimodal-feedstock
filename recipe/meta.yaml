@@ -18,11 +18,11 @@ build:
   script: {{ PYTHON }} -m pip install ./multimodal -vv
   number: 0
   script_env:
-   - RELEASE=1
+   - RELEASE=2
 
 requirements:
   build:
-    - {{ compiler('cuda') }}                 # [linux and cuda_compiler_version != "None"]
+    # - {{ compiler('cuda') }}                 # [linux and cuda_compiler_version != "None"]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
@@ -64,7 +64,6 @@ requirements:
     - jinja2 >=3.0.3,<3.2
     - tensorboard >=2.9,<3
     - pytesseract >=0.3.9,<0.3.11
-    # - PyMuPDF <=1.21.1
     - autogluon.core =={{ version }}
     - autogluon.features =={{ version }}
     - autogluon.common =={{ version }}
@@ -76,7 +75,7 @@ test:
   #   - python -c "from autogluon.multimodal import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
   requires:
     - pip
-    - pytorch =*=cuda*  # [linux and cuda_compiler_version != "None"]
+    # - pytorch =*=cuda*  # [linux and cuda_compiler_version != "None"]
 
 about:
   home: https://pypi.org/project/autogluon.multimodal
