@@ -6,8 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4c792085a9382eb481ecec25389692f28e961c1e83ed08bdfea0d23ec8c89069
+  url: https://github.com/autogluon/autogluon/archive/1c5e25061a5ba76f0bae91b903b31192e305b98a.tar.gz
+  sha256: 12c422acd4d5bb4592164051d7af7eba768edefea9fb89995e9802f624ed93d0
+  # url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
+  # sha256: 4c792085a9382eb481ecec25389692f28e961c1e83ed08bdfea0d23ec8c89069
 
 build:
   # noarch: python
