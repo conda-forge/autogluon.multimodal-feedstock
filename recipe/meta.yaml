@@ -1,22 +1,20 @@
 {% set name = "autogluon.multimodal" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/9703f24262d6aef471aee63fc9891761b7691c66.tar.gz
-  sha256: 9017e687410f91b9c6c5e7339f36f9b0b12f11857a4700059cc7b1285acc4562
-  # url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: 4c792085a9382eb481ecec25389692f28e961c1e83ed08bdfea0d23ec8c89069
+  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: d1d357c154ad8deee5614f950ad07ee68ac2f65b8f3af114c1ee93c819934f1b
 
 build:
   noarch: python
   # skip: true  # [py>=311]
   # skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 2
+  number: 0
   script_env:
    - RELEASE=1
 
@@ -70,8 +68,8 @@ requirements:
 test:
   imports:
     - autogluon.multimodal
-  # commands:
-  #   - python -c "from autogluon.multimodal import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
+  commands:
+    - python -c "from autogluon.multimodal import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
   requires:
     - pip
     # - pytorch =*=cuda*  # [linux and cuda_compiler_version != "None"]
