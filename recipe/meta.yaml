@@ -6,15 +6,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/5cc799b1ac88a967e1a7fdac9e8594ca7475c2c5.tar.gz
-  sha256: 4bc97b77dd44ec7dbdb8a9767388eff055cd5d933226ef87d30b9f99fc8bf2b2
+  url: https://github.com/autogluon/autogluon/archive/1cf73e83553da1d2228ef2436514c9f818dd167e.tar.gz
+  sha256: 4843f4dcff97005954762eaf9f932c39df5b626b8f662ab976b0cb6a9a8d0606
 
 build:
   noarch: python
   # skip: true  # [py>=311]
   # skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 3
+  number: 4
   script_env:
     - RELEASE=1
 
