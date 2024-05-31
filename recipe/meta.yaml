@@ -17,7 +17,7 @@ build:
   # skip: true  # [py>=311]
   # skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 2 
+  number: 3 
   script_env:
     - RELEASE=1
 
@@ -40,9 +40,9 @@ requirements:
     - pillow >=10.0.1,<11
     - tqdm >=4.38,<5
     - boto3 >=1.10,<2
-    - pytorch >=2.1,<2.3
-    - pytorch-lightning >=2.1,<2.3
-    - lightning >=2.1,<2.3
+    - pytorch >=2.1,<2.4
+    - pytorch-lightning >=2.1,<2.4
+    - lightning >=2.1,<2.4
     - transformers >=4.38.0,<4.41.0
     - sentencepiece >=0.1.91,!=0.1.92
     - accelerate >=0.21.0,<0.22.0
