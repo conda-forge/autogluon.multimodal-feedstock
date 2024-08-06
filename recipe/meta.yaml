@@ -17,9 +17,9 @@ build:
   # skip: true  # [py>=311]
   # skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 0 
+  number: 1 
   script_env:
-    - RELEASE=2
+    - RELEASE=1
 
 requirements:
   build:
