@@ -9,30 +9,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz 
-  sha256: 54eb1b144cbf6980d6fb34d1ccb870f486c3ed9086d9d6e1ff84554e5cab858a 
+  url: https://autogluon.s3.us-west-2.amazonaws.com/tarballs/tarball.tar.gz 
+  sha256: c4d63e9d376d94005a42374feaec62f74fdc20a86d4f5aac3053b992e9410d1e 
 
 build:
   noarch: python
-  # skip: true  # [py>=311]
-  # skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 3 
+  number: 4 
   script_env:
     - RELEASE=1
 
 requirements:
   build:
-    # - {{ compiler('cuda') }}                 # [cuda_compiler_version != "None"]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy  >=1.21,<1.29                    # [build_platform != target_platform]
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - pip
   run:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - numpy >=1.21,<1.29
     - scipy >=1.5.4,<1.15
     - pandas >=2.0.0,<2.3.0
