@@ -10,12 +10,12 @@ package:
 
 source:
   url: https://autogluon.s3.us-west-2.amazonaws.com/tarballs/tarball.tar.gz 
-  sha256: c4d63e9d376d94005a42374feaec62f74fdc20a86d4f5aac3053b992e9410d1e 
+  sha256: ab3ed144bdc7693b6cc869e7f2879856ac489122663812ac1af122fbd5cb4496
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 4 
+  number: 5 
   script_env:
     - RELEASE=1
 
