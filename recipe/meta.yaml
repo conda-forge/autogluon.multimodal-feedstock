@@ -9,8 +9,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 0c73fa3eb5ce23032471a12056b13f17e1af542ecf8b562efdb7b586d7c44200 
+  url: https://autogluon.s3.us-west-2.amazonaws.com/tarballs/0.8.3_patch/tarball.tar.gz
+  sha256: 7598e23a9d81867828a6302e6a859942bbb41e3668bbe4d8edfe747ed306d203
 
 build:
   noarch: python
@@ -82,10 +82,10 @@ about:
   home: https://pypi.org/project/autogluon.multimodal
   summary: AutoML for Image, Text, and Tabular Data
   description: |
-    AutoGluon automates machine learning tasks enabling you to easily achieve strong 
-    predictive performance in your applications. With just a few lines of code, you 
-    can train and deploy high-accuracy machine learning and deep learning models on 
-    image, text, time series, and tabular data.  
+    AutoGluon automates machine learning tasks enabling you to easily achieve strong
+    predictive performance in your applications. With just a few lines of code, you
+    can train and deploy high-accuracy machine learning and deep learning models on
+    image, text, time series, and tabular data.
   dev_url: https://github.com/autogluon/autogluon/
   license: Apache-2.0
   license_file: LICENSE
