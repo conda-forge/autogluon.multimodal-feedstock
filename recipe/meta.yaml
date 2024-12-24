@@ -14,7 +14,7 @@ build:
   # skip: true  # [py>=311]
   # skip: true  # [linux and cuda_compiler_version not in ("None", "11.2")]
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 1
+  number: 2
   script_env:
     - RELEASE=1
 
@@ -26,10 +26,10 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy  >=1.21,<1.27                    # [build_platform != target_platform]
   host:
-    - python >=3.8,<3.11
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8,<3.11
+    - python >={{ python_min }},<3.11
     - numpy >=1.21,<1.27
     - scipy >=1.5.4,<1.12
     - pandas >=1.4.1,<2.2
@@ -74,6 +74,7 @@ test:
   requires:
     - pip
     # - pytorch =*=cuda*  # [linux and cuda_compiler_version != "None"]
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/autogluon.multimodal
