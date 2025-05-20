@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 0
+  number: 1
   script_env:
     - RELEASE=1
 
@@ -37,8 +37,9 @@ requirements:
     - pillow >=10.0.1,<12
     - tqdm >=4.38,<5
     - boto3 >=1.10,<2
-    - pytorch >=2.2,<2.7
-    - lightning >=2.2,<2.7
+    - pytorch >=2.2,<2.8
+    - torchvision >=0.16.0,<0.23.0
+    - lightning >=2.2,<2.8
     - transformers >=4.38.0,<5
     - sentencepiece >=0.1.91,!=0.1.92
     - accelerate >=0.34.0,<2.0
