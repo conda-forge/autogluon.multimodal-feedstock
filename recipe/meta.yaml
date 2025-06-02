@@ -28,6 +28,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }},<3.13
     - numpy >=1.25.0,<2.3.0
@@ -73,6 +74,7 @@ test:
     - python -c "from autogluon.multimodal import __version__ as v; from packaging.version import parse; expected = '{{ version }}'; assert parse(v) == parse(expected), f'{v} != {expected}'"
   requires:
     - pip
+    - python {{ python_min }}
     # - pytorch =*=cuda*  # [linux and cuda_compiler_version != "None"]
 
 about:
