@@ -41,7 +41,7 @@ requirements:
     - pytorch >=2.2,<2.8
     - torchvision >=0.16.0,<0.23.0
     - lightning >=2.2,<2.8
-    - transformers >=4.38.0,<4.50
+    - transformers >=4.38.0,<5
     - sentencepiece >=0.1.91,!=0.1.92
     - accelerate >=0.34.0,<2.0
     - requests >=2.30,<3
