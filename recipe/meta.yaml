@@ -1,5 +1,5 @@
 {% set name = "autogluon.multimodal" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 # {% set autogluon_proc_type = "cpu" if cuda_compiler_version == "None" else "gpu" %}  # [linux64]
 # {% set autogluon_proc_type = "cpu" %}   # [not linux64]
@@ -10,12 +10,12 @@ package:
 
 source:
   url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 42e4838bb95328cedb54a9d094072068d8ce1e610a1154f91190b3670011561b
+  sha256: 133ceb769cebce26255f379c129b58acacab2424a692b7ee81f02d78bbb228cb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 0 
+  number: 0
   script_env:
     - RELEASE=1
 
@@ -30,7 +30,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - numpy >=1.25.0,<2.4.0
     - scipy >=1.5.4,<1.17
     - pandas >=2.0.0,<2.4.0
@@ -38,10 +38,10 @@ requirements:
     - pillow >=10.0.1,<12
     - tqdm >=4.38,<5
     - boto3 >=1.10,<2
-    - pytorch >=2.2,<2.8
-    - torchvision >=0.16.0,<0.23.0
-    - lightning >=2.2,<2.8
-    - transformers >=4.38.0,<5
+    - pytorch >=2.6,<2.10
+    - torchvision >=0.21.0,<0.25.0
+    - lightning >=2.5.1,<2.6
+    - transformers >=4.51.0,<4.58
     - sentencepiece >=0.1.91,!=0.1.92
     - accelerate >=0.34.0,<2.0
     - requests >=2.30,<3
