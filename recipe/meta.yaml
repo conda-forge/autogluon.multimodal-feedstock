@@ -1,5 +1,5 @@
 {% set name = "autogluon.multimodal" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.0" %}
 
 # {% set autogluon_proc_type = "cpu" if cuda_compiler_version == "None" else "gpu" %}  # [linux64]
 # {% set autogluon_proc_type = "cpu" %}   # [not linux64]
