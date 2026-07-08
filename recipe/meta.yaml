@@ -69,10 +69,9 @@ requirements:
     - autogluon.common =={{ version }}
 
 test:
-  imports:
-    - autogluon.multimodal
-    - setuptools
   commands:
+    - pip install setuptools
+    - python -c "import autogluon.multimodal"
     - python -c "from autogluon.multimodal import __version__ as v; from packaging.version import parse; expected = '{{ version }}'; assert parse(v) == parse(expected), f'{v} != {expected}'"
   requires:
     - pip
