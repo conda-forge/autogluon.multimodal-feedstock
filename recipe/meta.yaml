@@ -63,19 +63,19 @@ requirements:
     - pytesseract >=0.3.9,<0.4
     - pdf2image >=1.17.0,<1.19
     - pyopenssl >=23.2.0  # issue https://github.com/conda/conda/issues/13619#issuecomment-2075825121
-    - setuptools
+    - setuptools <70
     - autogluon.core =={{ version }}
     - autogluon.features =={{ version }}
     - autogluon.common =={{ version }}
 
 test:
   commands:
-    - pip install setuptools
+    - pip install "setuptools<70"
     - python -c "import autogluon.multimodal"
     - python -c "from autogluon.multimodal import __version__ as v; from packaging.version import parse; expected = '{{ version }}'; assert parse(v) == parse(expected), f'{v} != {expected}'"
   requires:
     - pip
-    - setuptools
+    - setuptools <70
     - python {{ python_min }}
     # - pytorch =*=cuda*  # [linux and cuda_compiler_version != "None"]
 
