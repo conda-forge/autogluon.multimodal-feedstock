@@ -1,0 +1,4 @@
+# ray-tune >=2.54 (pulled in via autogluon.core) dropped the Python 3.10 build on
+# conda-forge, so AutoGluon 1.6.1 cannot support 3.10 here. Raise the floor to 3.11.
+python_min:
+  - '3.11'
