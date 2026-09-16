@@ -1,6 +1,6 @@
 {% set autogluon_proc_type = "cpu" %}  # [not linux64]
 {% set name = "autogluon.multimodal" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 # {% set autogluon_proc_type = "cpu" if cuda_compiler_version == "None" else "gpu" %}  # [linux64]
 # {% set autogluon_proc_type = "cpu" %}   # [not linux64]
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 914089387b946a53fe48054c38837ff5a3aa6224b956d00386505110d6f838c0
+  sha256: 34f4569b87d60a60bbd73260c82ca5ed891cb76e7189cbf5ca865c6378af2eec
 
 build:
   noarch: python
@@ -56,7 +56,7 @@ requirements:
     - omegaconf >=2.1.1,<2.4.0  # setup.py is <2.3.0 but it doesn't work with py311
     - pytorch-metric-learning >=1.3.0,<2.9
     - nlpaug >=1.1.10,<1.2.0
-    - nltk >=3.10,<3.11  # Updated upper bound to address CVE-2024-39705
+    - nltk >=3.10.3,<3.11  # lower bound addresses a known CVE
     - openmim >=0.3.7,<0.4.0
     - defusedxml >=0.7.1,<0.7.2
     - jinja2 >=3.0.3,<3.2
