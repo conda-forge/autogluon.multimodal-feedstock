@@ -16,7 +16,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./multimodal -vv
-  number: 0
+  number: 1
   script_env:
     - RELEASE=1
 
@@ -36,7 +36,7 @@ requirements:
     - scipy >=1.5.4,<1.19
     - pandas >=2.0.0,<2.4.0
     - scikit-learn >=1.4.0,<1.10.0
-    - pillow >=10.0.1,<13 # bumped upperbound to address CVE
+    - pillow >=10.0.1,<14
     - tqdm >=4.38,<5
     - boto3 >=1.10,<2
     - pytorch >=2.10,<2.14
